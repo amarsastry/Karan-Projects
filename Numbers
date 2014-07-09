@@ -1,1 +1,43 @@
-test test test
+# Numbers
+
+
+# Find Cost of Tile to Cover W x H Floor 
+# Calculate the total cost of tile it would take 
+# to cover a floor plan of width and height, 
+# using a cost entered by the user.
+
+width = None
+length = None
+tile_price = None
+
+while type(width) != float :
+	width = raw_input("what is the width, in feet?\n")
+	try:
+		width = float(width)
+	except:
+		print "that is not a valid number. Please try again.\n"
+
+print width, "feet"
+
+
+while type(length) != float :
+	length = raw_input("What is the length, in feet?\n")
+	try:
+		length = float(length)
+	except:
+		print "that is not a valid number, please try again\n"
+
+print width, "feet"
+
+while type(tile_price) != float :
+	tile_price = raw_input("What is the price per tile, in dollars?\n")
+	try :
+		tile_price = float(tile_price)
+	except:
+		print "that is not a valid number, please try again.\n"
+		
+def tile_calculator ():
+	total_price = width * length * tile_price
+	print "the total price is $", total_price
+
+tile_calculator()
